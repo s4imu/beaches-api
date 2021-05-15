@@ -1,0 +1,57 @@
+{
+  "name": "beaches-api",
+  "version": "1.0.0",
+  "description": "Typescript Node.js api",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "yarn build && node dist/src/index.js",
+    "start:dev": "ts-node-dev src/index.ts",
+    "lint": "eslint ./src ./test --ext .ts",
+    "test:functional": "jest --projects ./test --forceExit --runInBand",
+    "test:unit": "jest",
+    "lint:fix": "eslint ./src ./test --ext .ts --fix",
+    "style:check": "prettier --check src/**/*.ts test/**/*.ts",
+    "style:fix": "prettier --write src/**/*.ts test/**/*.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s4imu/beaches.git"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "mongodb",
+    "api"
+  ],
+  "author": "Symon Barreto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s4imu/beaches/issues"
+  },
+  "homepage": "https://github.com/s4imu/beaches#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/jest": "^26.0.23",
+    "@types/module-alias": "^2.0.0",
+    "@types/node": "^15.0.2",
+    "@types/supertest": "^2.0.11",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "eslint": "^7.26.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.3.0",
+    "supertest": "^6.1.3",
+    "ts-jest": "^26.5.6",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@overnightjs/core": "^1.7.5",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2"
+  }
+}
